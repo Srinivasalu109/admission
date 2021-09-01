@@ -1,13 +1,11 @@
 /*eslint-disable*/
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/App.css';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { Button } from 'react-bootstrap';
 import Card from '@material-ui/core/Card';
 import React from 'react';
-import CancelIcon from '@material-ui/icons/Cancel';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -16,7 +14,6 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { useState } from 'react';
 import { FaBullhorn, FaRegSun } from "react-icons/fa"
@@ -65,9 +62,7 @@ setClicked(!click)
   return (
     <div className="App">
       <div className="header">
-        <div className="burger" onClick={openclose}>     
-<MenuIcon />
-</div>
+  
       </div>
       <div className="menubar">
         <div className="menusearch">
@@ -77,7 +72,6 @@ setClicked(!click)
         <div className="menuicons">
           <div className="endIcons">
             <button class="button"><div><span>Download App</span><ExpandMoreIcon /></div></button>
-            <FontAwesomeIcon icon={["fas", "fa-bullhorn"]} />
           </div>
           <div className="seticons">
           <FaBullhorn size="2rem" />
@@ -95,9 +89,6 @@ setClicked(!click)
   menu.map(menu=><div className={`sidebaritem`}>{menu}</div>)
 }
 </div>
-<div className="visible">
-  <CancelIcon/>
-</div>
 
 </div>
       </div>
@@ -107,7 +98,7 @@ setClicked(!click)
 
           <div className="navItems">
             {
-              navItems.map((item, index) => <div className={`${isClicked[index] ? "display" : "notclicked"}`} onClick={() => handleClick(index)}>{item}</div>)
+              navItems.map((item, index) => <div className={`${isClicked[index] ? "display" : "notclicked"}`} onClick={() => handleClick(index)} key={index}>{item}</div>)
             }
           </div>
           {
@@ -150,7 +141,7 @@ setClicked(!click)
 
                 <div className="allcards">
                   {
-                    four.map(card => <Card className="card">
+                    four.map((card,index) => <Card className="card" key={index}>
                       <div className="boxtext">CLASSROOM CUM MENTORS HIP</div>
                       <div className="date"><div>End Date:</div><div>01-jun-2022</div></div>
                       <div className="total"><div>Total Students:0</div><div className="assign">Assign/Unassign</div></div>
