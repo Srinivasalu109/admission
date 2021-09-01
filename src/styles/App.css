@@ -1,0 +1,247 @@
+.App{
+  display: grid;
+  grid-template-columns: 20vw 80vw;
+  grid-template-rows: 10vh 90vh;
+}
+.header{
+  background-color: #aeb0a9;
+}
+.menubar{
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menusearch{
+  min-width: 227px;
+  border: black 2px solid;
+  width: 30%;
+  height: 60%;
+  border-radius: 100px;
+}
+.button {
+  min-width: 108px;
+  background-color:white;
+  border-color: black;
+  /* padding: .4rem ; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer;
+  /* height: 60%; */
+
+}
+.menusearch input{
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+.searchicon{
+  
+  margin: 5px;
+}
+.menuicons{
+  display: flex;
+  justify-content: space-around;
+ /* margin-left: 14rem; */
+  width: 40%;
+}
+.sidemenu{
+  background-color: #1f2533;
+  direction: rtl;
+  overflow:auto;
+  overflow-x: hidden;
+}
+.navItems{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+.display{
+  color: #4478f2;
+  border-bottom: #4478f2 2px solid;
+  padding-bottom: 10px;
+}
+.courseselect{
+padding: .7rem;
+margin: 0px 10px 0px ;
+}
+.selectyears{
+padding: .7rem;
+}
+.visible{
+ visibility: hidden;
+}
+
+.searchcourse{
+  padding: .6rem;
+  border-radius: 10px;
+  outline: none;
+}
+.courseflex{
+  display: flex;
+  justify-content: space-between;
+}
+.addcourse{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  margin-right:10px ;
+}
+.notclicked{
+  padding-bottom: 10px;
+}
+.target{
+  margin: 20px;
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+.card{
+  width: 24%;
+}
+.boxtext{
+  color: #4670d4;
+  border-left: #4670d4 2px solid;
+  padding-left: 1rem;
+}
+.date{
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+.total{
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+.assign{
+  color: #4670d4;
+}
+.allcards{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.searchsubject{
+  padding: .5rem;
+  border-radius: 5px;
+  outline: none;
+  margin-right: 10px;
+}
+.subject{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.subject input{
+  margin-left: 10px;
+
+}
+.absolute{
+
+position: absolute;
+background-color: #1f2533;
+direction: rtl;
+overflow-y:scroll;
+overflow-x: hidden;
+left: 0;
+top:0;
+margin-right: 200px;
+z-index: 100;
+display: flex;
+}
+.checkbox{
+}
+.ias{
+  color: white;
+  text-align: center;
+  padding-top: 1rem;
+ padding-bottom: 1rem;
+ border-bottom:2px solid white;
+}
+.sidebaritem{
+  color: white;
+  font-size: 1rem;padding: 10px;
+}
+.sidebaritem{
+  direction:ltr;
+}
+.sidebaritem:hover{
+  background-color: #4670d4;
+}
+* {
+  scrollbar-width: 12px;
+  scrollbar-color: skyblue  #4670d4;;
+}
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+
+*::-webkit-scrollbar-track {
+  background: white;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color:  #4670d4;;   
+  border-radius: 1px;       
+}
+.burger{
+display: flex;
+justify-content: center;
+height: 100%;
+align-items: center;
+visibility: hidden;
+}
+.seticons{
+  margin-left:1rem ;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media(max-width:840px) {
+  .seticons{
+    display: none;
+  }
+  .navItems{
+    display: block;
+    margin: .7rem;
+  }
+  .courseflex{
+    display: none;
+  }
+  .subject{
+    display: none;
+  }
+  .addcourse{
+    display: block;
+  }
+  .courseselect{
+    display: block;
+  }
+  .burger{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    visibility: visible;
+    }
+    .visible{
+      visibility: visible;
+    }
+  .sidemenu{
+  visibility: hidden;
+  }
+  .allcards{
+    width: 100%;
+    display: block;
+  }
+.card{
+  margin: 10px;
+  width: 100%;
+}
+  
+}
